@@ -1,0 +1,99 @@
+.home {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+
+	&__logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 50;
+		box-shadow: 0 0 25px $purple;
+		border: 2px solid $rose;
+		border-radius: 50%;
+		// padding: 0 1em;
+		width: 100%;
+		max-width: 250px;
+
+		@include respond(mobile-max) {
+			max-width: 300px;
+		}
+
+		@include respond(tablet) {
+			max-width: 350px;
+		}
+	}
+	&__boxes {
+		display: flex;
+		height: 100%;
+	}
+
+	&__box {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+
+		&:hover &-img {
+			filter: grayscale(0);
+		}
+
+		// &::after {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	content: '';
+		// }
+
+		&-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			filter: grayscale(1);
+			transition: filter 0.3s;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__link {
+		position: absolute;
+		bottom: 150px;
+		z-index: 20;
+		transition: box-shadow 0.2s;
+		cursor: pointer;
+		box-shadow: 0 0 15px $rose;
+		border-radius: 2px;
+		background-color: $rose;
+		padding: 0.3em 0.6em;
+		color: $black;
+		font-size: 1.3rem;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:hover {
+			// background-color: $rose;
+			box-shadow: 0 0 20px $purple;
+		}
+
+		@include respond(mobile) {
+			font-size: 1.6rem;
+		}
+
+		@include respond(tablet) {
+			padding: 0.4em 0.8em;
+			font-size: 2rem;
+		}
+
+		@include respond(desktop) {
+			font-size: 2.5rem;
+		}
+	}
+}

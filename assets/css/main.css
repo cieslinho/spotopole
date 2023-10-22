@@ -1,0 +1,126 @@
+.container {
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 100%;
+  max-width: 1600px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* ul {
+  list-style-type: none;
+}
+
+* a {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: #f7d1dd;
+  color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #c592e0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.home__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  box-shadow: 0 0 25px #c592e0;
+  border: 2px solid #f7d1dd;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 250px;
+}
+@media only screen and (min-width: 568px) {
+  .home__logo {
+    max-width: 300px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .home__logo {
+    max-width: 350px;
+  }
+}
+.home__boxes {
+  display: flex;
+  height: 100%;
+}
+.home__box {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.home__box:hover .home__box-img {
+  filter: grayscale(0);
+}
+.home__box-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(1);
+  transition: filter 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home__link {
+  position: absolute;
+  bottom: 150px;
+  z-index: 20;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  box-shadow: 0 0 15px #f7d1dd;
+  border-radius: 2px;
+  background-color: #f7d1dd;
+  padding: 0.3em 0.6em;
+  color: #000;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.home__link:hover {
+  box-shadow: 0 0 20px #c592e0;
+}
+@media only screen and (min-width: 360px) {
+  .home__link {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .home__link {
+    padding: 0.4em 0.8em;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1230px) {
+  .home__link {
+    font-size: 2.5rem;
+  }
+}
