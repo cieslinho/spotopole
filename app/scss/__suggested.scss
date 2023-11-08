@@ -1,0 +1,252 @@
+.suggested {
+	@include section-padding;
+
+	&__top {
+		display: flex;
+		justify-content: center;
+		padding: 2em 0.5em;
+
+		@include respond(tablet) {
+			padding: 2em;
+			padding-bottom: 1em;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		gap: 0.5em;
+
+		@include respond(tablet) {
+			gap: 1em;
+		}
+	}
+
+	&__btn {
+		transition: box-shadow 0.2s, background-color 0.2s, color 0.2s;
+		cursor: pointer;
+		border: none;
+		border-radius: 25px;
+		background-color: $black;
+		padding: 0.5em 1em;
+		color: $white;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@include respond(tablet) {
+			font-size: 1.8rem;
+		}
+
+		&:hover {
+			box-shadow: 0 0 15px $rose;
+			background-color: $white;
+			color: $black;
+		}
+	}
+
+	&__btn.active {
+		box-shadow: 0 0 15px $rose;
+		background-color: $white;
+		color: $black;
+	}
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 3em;
+		padding: 0.5em;
+
+		@include respond(mobile-max) {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: repeat(2, 1fr);
+			padding: 2em 0em;
+		}
+
+		@include respond(tablet) {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 2em 14em;
+		}
+	}
+
+	&__box {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+		box-shadow: 0 0 10px rgba($color: $black, $alpha: 0.2);
+		border: 1px solid $rose;
+		border-radius: 25px;
+		// background-color: rgba($color: $rose, $alpha: 0.2);
+		background-color: rgba($color: $black, $alpha: 0.2);
+		padding: 1em;
+		width: 100%;
+
+		&-img {
+			// filter: drop-shadow(5px 5px 5px $black);
+			width: 100%;
+			max-width: 300px;
+		}
+
+		&-btn {
+			position: absolute;
+			top: -15px;
+			right: -10px;
+			transition: background-color 0.2s;
+			cursor: pointer;
+			border: none;
+			border-radius: 50%;
+			background-color: $rose;
+
+			i {
+				transition: color 0.2s;
+				color: $purple;
+				font-size: 4rem;
+			}
+
+			&:hover {
+				background-color: $purple;
+
+				i {
+					color: $rose;
+				}
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+
+		&-top {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		&-middle {
+			flex-direction: column;
+			justify-content: stretch;
+			margin-block: 0.5em;
+			width: 100%;
+		}
+
+		&-details {
+			display: flex;
+			flex-direction: column;
+			gap: 0.6em;
+		}
+
+		&-prices,
+		&-titles,
+		&-spicy {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 2px solid $rose;
+			padding-block: 0.5em;
+		}
+
+		&-bottom {
+			align-items: center;
+			gap: 0.5em;
+		}
+
+		&-img {
+			max-width: 40px;
+		}
+
+		&-title {
+			color: $white;
+			font-weight: 400;
+		}
+
+		&-price {
+			font-weight: 700;
+		}
+
+		&-order {
+			&--mobile {
+				transition: background-color 0.2s, border 0.2s;
+				border: 2px solid $black;
+				border-radius: 50%;
+				background-color: $black;
+				padding: 0.4em;
+				text-align: center;
+
+				@include respond(tablet) {
+					padding: 0.6em;
+				}
+
+				&:hover {
+					border: 2px solid $white;
+					background-color: $white;
+
+					i {
+						color: $black;
+					}
+				}
+
+				i {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: color 0.2s;
+					color: $white;
+					font-size: 1.8rem;
+				}
+			}
+
+			&--pyszne {
+				transition: border 0.2s, background-color 0.2s, color 0.2s;
+				border-radius: 25px;
+				background-color: $light-orange;
+				padding: 0.4em 2em;
+				color: $white;
+				font-weight: 700;
+				font-size: 1.5rem;
+
+				@include respond(tablet) {
+					padding: 0.5em 2em;
+					font-size: 1.6rem;
+				}
+
+				&:hover {
+					background-color: $white;
+					color: $black;
+				}
+			}
+		}
+	}
+
+	&__menu {
+		display: block;
+		z-index: 20;
+		transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+		margin: 0 auto;
+		margin-top: 2em;
+		box-shadow: 0 0 15px rgba($color: $black, $alpha: 0.3);
+		border-radius: 25px;
+		background-color: $black;
+		padding: 0.5em 1em;
+		max-width: 250px;
+		color: $white;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include respond(tablet) {
+			margin-top: 1em;
+			font-size: 1.8rem;
+		}
+
+		&:hover {
+			box-shadow: 0 0 15px $rose;
+			background-color: $white;
+			color: $black;
+		}
+	}
+}

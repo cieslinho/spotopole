@@ -1,0 +1,94 @@
+.contact {
+	@include section-padding;
+
+	.section-title {
+		&::after {
+			width: 85%;
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		padding: 2em 0;
+
+		@include respond(desktop-small) {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: 1.5fr 2fr;
+		}
+	}
+
+	&__texts {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	&__text {
+		line-height: 150%;
+
+		@include respond(tablet) {
+			// font-size: 2.1rem;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+
+		@include respond(tablet) {
+			gap: 0.8em;
+		}
+
+		&-box {
+			display: flex;
+			gap: 0.5em;
+			width: 100%;
+
+			@include respond(tablet) {
+				gap: 0.8em;
+			}
+		}
+
+		&-input,
+		&-textarea {
+			outline: none;
+			border: none;
+			border: 2px solid $black;
+			border-radius: 5px;
+			background-color: rgba($color: $black, $alpha: 0.2);
+			padding: 0.5em 1em;
+			width: 100%;
+			color: $white;
+
+			@include respond(tablet) {
+				padding: 0.8em 1.6em;
+			}
+
+			font-family: 'Poppins', sans-serif;
+
+			&::placeholder {
+				color: $white;
+			}
+		}
+
+		&-btn {
+			cursor: pointer;
+			outline: none;
+			border: none;
+			border-radius: 5px;
+			background-color: $white;
+			padding: 0.5em 1em;
+			color: $black;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			@include respond(tablet) {
+				padding: 0.8em 1.6em;
+			}
+		}
+	}
+}

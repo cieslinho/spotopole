@@ -1,0 +1,83 @@
+.gallery {
+	@include section-padding-block;
+
+	.section-title-reverse {
+		&::after {
+			width: 85%;
+		}
+	}
+
+	&__boxes {
+		padding: 2em 0;
+	}
+
+	&__box {
+		position: relative;
+		height: 550px;
+
+		&-img {
+			filter: grayscale(1);
+			transition: filter 0.3s;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 50;
+			transition: background-color 0.3s;
+
+			background-color: rgba($color: $black, $alpha: 0.6) !important;
+			width: 100%;
+			height: 100%;
+			content: '';
+		}
+	}
+
+	.swiper-slide-active {
+		.gallery__box-img {
+			filter: grayscale(0);
+		}
+
+		&::after {
+			background-color: transparent !important;
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		// top: initial;
+		bottom: 120px;
+		transition: 0.2s border;
+		border: 2px solid transparent;
+		border-radius: 50%;
+		padding: 0.2em 0.4em;
+		width: 50px;
+		height: 50px;
+
+		&:hover {
+			border: 2px solid $purple;
+
+			&::after {
+				color: $purple;
+			}
+		}
+
+		&:after {
+			transition: color 0.2s;
+			// background-color: rgba($color: $purple, $alpha: 0.3);
+			color: $rose;
+			font-size: 2.5rem;
+		}
+	}
+
+	.swiper-button-next {
+		right: 30px;
+	}
+
+	.swiper-button-prev {
+		left: 30px;
+	}
+}

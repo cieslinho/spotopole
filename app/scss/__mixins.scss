@@ -14,6 +14,11 @@
 			@content;
 		}
 	}
+	@if $breakpoint == tablet-xl {
+		@media only screen and (min-width: 992px) {
+			@content;
+		}
+	}
 	@if $breakpoint == desktop-small {
 		@media only screen and (min-width: 1024px) {
 			@content;
@@ -41,7 +46,7 @@
 }
 
 @mixin section-padding-block {
-	padding-block: 1em;
+	padding-block: 2em;
 
 	@include respond(tablet) {
 		padding-block: 3em;

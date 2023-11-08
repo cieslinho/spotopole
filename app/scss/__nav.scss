@@ -1,0 +1,265 @@
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: $black;
+	width: 100%;
+
+	// mobile
+
+	&__mobile {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5em 1em;
+
+		@include respond(tablet-xl) {
+			display: none;
+		}
+	}
+
+	&__overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		background-color: rgba($color: #000000, $alpha: 0.5);
+		width: 100%;
+		height: 100%;
+	}
+
+	&__overlay.active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__logo {
+		width: 80px;
+	}
+
+	&__navbar {
+		display: flex;
+		position: absolute;
+		top: 0;
+		right: 0;
+		flex-direction: column;
+		transform: translateX(105%);
+		transition: transform 0.5s ease-in-out;
+		box-shadow: 0 0 15px $purple;
+		background-color: $rose;
+		width: 70vw;
+		height: 100vh;
+	}
+
+	&__navbar.active {
+		transform: translateX(0);
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__link {
+		transition: background-color 0.2s, color 0.2s, border-bottom 0.2s;
+
+		padding: 0.5em 1em;
+		width: 100%;
+		max-width: 300px;
+		color: $black;
+		font-size: 1.8rem;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: $purple;
+			color: $white;
+		}
+	}
+
+	&__order {
+		align-self: center;
+		margin-top: 1em;
+		background-color: $purple;
+		color: $white;
+	}
+
+	&__btn {
+		z-index: 999;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		background: none;
+		padding: 0.5em;
+
+		&-box {
+			position: relative;
+			width: 30px;
+			height: 20px;
+		}
+
+		&-bars {
+			position: absolute;
+			top: 6px;
+			right: 0;
+			transition: all 0.2s ease-in-out;
+			background-color: $purple;
+			width: 100%;
+			height: 1.5px;
+
+			&::after {
+				position: absolute;
+				top: 7px;
+				right: 0;
+				transition: all 0.2s ease-in-out;
+				background-color: $purple;
+				width: 15px;
+				height: 1.5px;
+				content: '';
+			}
+		}
+
+		&:hover &-bars {
+			width: 15px;
+		}
+
+		&:hover &-bars::after {
+			width: 30px;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		margin-top: 2em;
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		padding: 0.3em;
+
+		i {
+			transition: background-color 0.2s, color 0.2s;
+			border-radius: 50%;
+			background-color: rgba($color: $white, $alpha: 0.3);
+			padding: 0.1em;
+			color: $black;
+			font-size: 4rem;
+		}
+
+		&:hover {
+			i {
+				background-color: $purple;
+				color: $white;
+			}
+		}
+	}
+
+	&__btn.active {
+		.nav__btn-bars,
+		.nav__btn-bars::after {
+			background-color: $black;
+			width: 100%;
+		}
+	}
+
+	// desktop
+
+	&__desktop {
+		display: none;
+
+		@include respond(tablet-xl) {
+			display: flex;
+			// position: relative;
+			justify-content: center;
+			align-items: center;
+			padding: 1em;
+		}
+
+		&-link {
+			position: relative;
+			transition: color 0.2s, text-shadow 0.2s;
+			padding: 0.5em;
+			color: $white;
+			font-size: 1.8rem;
+			text-transform: uppercase;
+
+			&::after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: width 0.3s;
+				background-color: $purple;
+				width: 0;
+				height: 1px;
+				content: '';
+			}
+
+			&:hover {
+				color: $purple;
+				text-shadow: 0 0 10px $purple;
+
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+
+		&-order {
+			color: $purple;
+			text-shadow: 0 0 10px $purple;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&-logo {
+			width: 90px;
+		}
+
+		&-socials {
+			display: flex;
+			align-items: center;
+			gap: 0.1em;
+		}
+
+		&-social {
+			display: flex;
+			align-items: center;
+			padding: 0.2em;
+
+			i {
+				transition: background-color 0.2s, color 0.2s;
+				border-radius: 50%;
+				background-color: rgba($color: $rose, $alpha: 0.1);
+				padding: 0.2em;
+				color: $white;
+				font-size: 3.5rem;
+			}
+
+			&:hover {
+				i {
+					background-color: $purple;
+					color: $white;
+				}
+			}
+		}
+
+		&-links {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+			margin: 0 auto;
+		}
+	}
+}

@@ -1,0 +1,147 @@
+.header {
+	// position: relative;
+	width: 100%;
+	height: 100vh;
+
+	&__box {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+
+		&::after {
+			position: absolute;
+			right: 0;
+			left: 0;
+			background-color: rgba($color: #000000, $alpha: 0.5);
+			width: 100%;
+			height: 100pc;
+			content: '';
+		}
+
+		&-img {
+			display: block;
+			background-position: top;
+			width: 100%;
+			height: 100vh;
+			object-fit: cover;
+		}
+
+		&-texts {
+			display: flex;
+			position: absolute;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5em;
+			z-index: 20;
+			padding: 0.5em 1em;
+			text-align: center;
+
+			@include respond(tablet) {
+				padding: 1em;
+			}
+		}
+
+		&-title {
+			color: $rose;
+			font-size: 4rem;
+
+			@include respond(tablet) {
+				font-size: 6rem;
+			}
+		}
+
+		&-description {
+			// margin-bottom: 0.1em;
+			position: relative;
+			background-color: rgba($color: #000000, $alpha: 0.5);
+			padding: 0.5em;
+			color: $rose;
+			font-style: italic;
+			font-size: 1.6rem;
+
+			@include respond(tablet) {
+				font-size: 1.8rem;
+			}
+
+			&::before {
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: $purple;
+				width: 75%;
+				height: 2px;
+				content: '';
+
+				@include respond(tablet) {
+					bottom: -15px;
+				}
+			}
+		}
+
+		&-btn {
+			transition: box-shadow 0.2s, background-color 0.2s, color 0.2s;
+			margin-top: 1.5em;
+			box-shadow: 0 0 10px $rose;
+			border-radius: 25px;
+			background-color: $rose;
+			padding: 0.5em 3em;
+			color: $black;
+
+			font-size: 2rem;
+			text-align: center;
+			text-transform: uppercase;
+
+			@include respond(tablet) {
+				margin-top: 1.8em;
+				font-size: 2.3rem;
+			}
+
+			&:hover {
+				box-shadow: 0 0 10px $purple;
+				background-color: $purple;
+				color: $white;
+			}
+		}
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		top: initial;
+		bottom: 120px;
+		transition: 0.2s border;
+		border: 2px solid transparent;
+		border-radius: 50%;
+		padding: 0.2em 0.4em;
+		width: 50px;
+		height: 50px;
+
+		&:hover {
+			border: 2px solid $purple;
+
+			&::after {
+				color: $purple;
+			}
+		}
+
+		&:after {
+			transition: color 0.2s;
+			// background-color: rgba($color: $purple, $alpha: 0.3);
+			color: $rose;
+			font-size: 2.5rem;
+		}
+	}
+
+	.swiper-button-next {
+		right: 30px;
+	}
+
+	.swiper-button-prev {
+		left: 30px;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $rose;
+	}
+}

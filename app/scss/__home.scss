@@ -41,16 +41,6 @@
 			filter: grayscale(0);
 		}
 
-		// &::after {
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	content: '';
-		// }
-
 		&-img {
 			position: absolute;
 			top: 0;
@@ -70,7 +60,7 @@
 		transition: box-shadow 0.2s;
 		cursor: pointer;
 		box-shadow: 0 0 15px $rose;
-		border-radius: 2px;
+		border-radius: 25px;
 		background-color: $rose;
 		padding: 0.3em 0.6em;
 		color: $black;
