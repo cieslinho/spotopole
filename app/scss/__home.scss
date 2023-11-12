@@ -57,20 +57,22 @@
 		position: absolute;
 		bottom: 150px;
 		z-index: 20;
-		transition: box-shadow 0.2s;
+		transition: box-shadow 0.2s, background-color 0.2s, color 0.2s;
 		cursor: pointer;
-		box-shadow: 0 0 15px $rose;
+		box-shadow: 0 0 15px $white;
 		border-radius: 25px;
-		background-color: $rose;
+		background-color: $white;
 		padding: 0.3em 0.6em;
 		color: $black;
+		font-weight: 700;
 		font-size: 1.3rem;
 		text-align: center;
 		text-transform: uppercase;
 
 		&:hover {
-			// background-color: $rose;
 			box-shadow: 0 0 20px $purple;
+			background-color: $purple;
+			color: $white;
 		}
 
 		@include respond(mobile) {
