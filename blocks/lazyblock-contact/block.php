@@ -1,4 +1,4 @@
-<section class="contact section-purple" id="kontakt">
+<section class="contact section-black" id="kontakt">
     <div class="container">
         <h2 class="section-title">Kontakt</h2>
 
@@ -23,22 +23,23 @@
                 </p>
 
                 <p class="contact__text">
-                    #NaszaSpołeczność #WspólnieMocniejsi #DołączDoNas
+                    <span class="contact__span">#NaszaSpołeczność</span> <span
+                        class="contact__span">#WspólnieMocniejsi</span> <span class="contact__span">#DołączDoNas</span>
                 </p>
             </div>
             <form action="" class="contact__form">
                 <div class="contact__form-box">
-                    <input type="text" class="contact__form-input" placeholder="Imię">
-                    <input type="text" class="contact__form-input" placeholder="Nazwisko">
+                    <input type="text" class="contact__form-input" placeholder="Imię" required>
+                    <input type="text" class="contact__form-input" placeholder="Nazwisko" required>
 
                 </div>
                 <div class="contact__form-box">
-                    <input type="email" class="contact__form-input" placeholder="e-mail">
-                    <input type="number" class="contact__form-input" placeholder="Telefon">
+                    <input type="email" class="contact__form-input" placeholder="e-mail" required>
+                    <input type="number" class="contact__form-input" placeholder="Telefon" required>
                 </div>
                 <div class="contact__form-box">
                     <textarea name="" id="" cols="30" rows="10" class="contact__form-textarea"
-                        placeholder="Wpisz treść wiadomości..."></textarea>
+                        placeholder="Wpisz treść wiadomości..." required></textarea>
                 </div>
 
                 <button class="contact__form-btn">wyślij</button>
@@ -47,4 +48,8 @@
         </div>
 
     </div>
+
 </section>
+<div class="contact__map">
+    <iframe src="https://snazzymaps.com/embed/544375" width="100%" height="300px" style="border:none;"></iframe>
+</div>

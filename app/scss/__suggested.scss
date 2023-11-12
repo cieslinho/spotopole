@@ -72,8 +72,7 @@
 	}
 
 	&__box {
-		display: flex;
-		position: relative;
+		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -81,13 +80,11 @@
 		box-shadow: 0 0 10px rgba($color: $black, $alpha: 0.2);
 		border: 1px solid $rose;
 		border-radius: 25px;
-		// background-color: rgba($color: $rose, $alpha: 0.2);
 		background-color: rgba($color: $black, $alpha: 0.2);
 		padding: 1em;
 		width: 100%;
 
 		&-img {
-			// filter: drop-shadow(5px 5px 5px $black);
 			width: 100%;
 			max-width: 300px;
 		}
@@ -116,6 +113,10 @@
 				}
 			}
 		}
+	}
+
+	&__box.active {
+		display: flex;
 	}
 
 	&__content {
@@ -148,6 +149,17 @@
 			align-items: center;
 			border-bottom: 2px solid $rose;
 			padding-block: 0.5em;
+		}
+
+		&-ingridients {
+			flex-wrap: wrap;
+		}
+
+		&-ingridient {
+			color: $rose;
+			font-style: italic;
+			font-weight: 700;
+			font-size: 1.1rem;
 		}
 
 		&-bottom {

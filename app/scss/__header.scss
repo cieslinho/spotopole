@@ -1,147 +1,200 @@
 .header {
-	// position: relative;
-	width: 100%;
-	height: 100vh;
+	margin-top: 130px;
+	@include section-padding;
 
-	&__box {
+	&__boxes {
 		display: flex;
 		position: relative;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
+		box-shadow: 0 0 15px $black;
+		border: 2px solid $purple;
+		border-radius: 25px;
+		background-color: rgba($color: $black, $alpha: 0.3);
+		padding: 2em 1em;
 
-		&::after {
-			position: absolute;
-			right: 0;
-			left: 0;
-			background-color: rgba($color: #000000, $alpha: 0.5);
-			width: 100%;
-			height: 100pc;
-			content: '';
+		@include respond(tablet) {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: 1.8fr 1fr;
+			align-items: flex-end;
+			gap: 1em;
+			background-color: $black;
 		}
 
-		&-img {
-			display: block;
-			background-position: top;
-			width: 100%;
-			height: 100vh;
-			object-fit: cover;
+		@include respond(desktop) {
+			gap: 3rem;
+		}
+	}
+
+	&__texts {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-size: 2.3rem;
+		text-align: center;
+
+		@include respond(tablet) {
+			margin-bottom: 0.1em;
+			font-size: 4rem;
+			text-align: left;
+		}
+
+		@include respond(desktop) {
+			font-size: 6rem;
+		}
+	}
+
+	&__description {
+		font-size: 1.8rem;
+		text-align: center;
+
+		span {
+			position: relative;
+			z-index: 10;
+
+			&::after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: -5;
+				background-color: $purple;
+				width: 100%;
+				height: 8px;
+				content: '';
+			}
+		}
+
+		@include respond(tablet) {
+			margin-bottom: 1em;
+			font-size: 2rem;
+			text-align: left;
+		}
+
+		@include respond(desktop) {
+			font-size: 2.4rem;
+		}
+	}
+
+	&__testimonials {
+		&-box {
+			margin-top: 1em;
+			border-radius: 15px;
+			background-color: rgba($color: $black, $alpha: 0.4);
+			padding: 0.5em;
+			width: 100% !important;
+
+			i {
+				font-size: 2rem;
+
+				@include respond(tablet) {
+					font-size: 2.5rem;
+				}
+
+				@include respond(desktop) {
+					font-size: 3rem;
+				}
+			}
+
+			@include respond(tablet) {
+				background-color: rgba($color: $rose, $alpha: 0.015);
+			}
 		}
 
 		&-texts {
 			display: flex;
-			position: absolute;
 			flex-direction: column;
-			align-items: center;
-			gap: 0.5em;
-			z-index: 20;
-			padding: 0.5em 1em;
-			text-align: center;
-
-			@include respond(tablet) {
-				padding: 1em;
-			}
+			gap: 0.3em;
+			padding: 1em;
 		}
 
-		&-title {
-			color: $rose;
-			font-size: 4rem;
-
-			@include respond(tablet) {
-				font-size: 6rem;
-			}
-		}
-
-		&-description {
-			// margin-bottom: 0.1em;
-			position: relative;
-			background-color: rgba($color: #000000, $alpha: 0.5);
-			padding: 0.5em;
-			color: $rose;
+		&-text {
 			font-style: italic;
-			font-size: 1.6rem;
+			font-size: 1.4rem;
+			line-height: 150%;
 
 			@include respond(tablet) {
+				font-size: 1.5rem;
+			}
+
+			@include respond(desktop) {
 				font-size: 1.8rem;
 			}
-
-			&::before {
-				position: absolute;
-				bottom: -10px;
-				left: 50%;
-				transform: translateX(-50%);
-				background-color: $purple;
-				width: 75%;
-				height: 2px;
-				content: '';
-
-				@include respond(tablet) {
-					bottom: -15px;
-				}
-			}
 		}
 
-		&-btn {
-			transition: box-shadow 0.2s, background-color 0.2s, color 0.2s;
-			margin-top: 1.5em;
-			box-shadow: 0 0 10px $rose;
-			border-radius: 25px;
-			background-color: $rose;
-			padding: 0.5em 3em;
-			color: $black;
-
-			font-size: 2rem;
-			text-align: center;
-			text-transform: uppercase;
+		&-author {
+			font-style: italic;
+			font-size: 1.4rem;
 
 			@include respond(tablet) {
-				margin-top: 1.8em;
-				font-size: 2.3rem;
+				font-size: 1.5rem;
 			}
 
-			&:hover {
-				box-shadow: 0 0 10px $purple;
-				background-color: $purple;
-				color: $white;
+			@include respond(desktop) {
+				font-size: 1.8rem;
 			}
 		}
 	}
 
-	.swiper-button-next,
-	.swiper-button-prev {
-		top: initial;
-		bottom: 120px;
-		transition: 0.2s border;
-		border: 2px solid transparent;
-		border-radius: 50%;
-		padding: 0.2em 0.4em;
-		width: 50px;
-		height: 50px;
+	&__photo {
+		padding: 0;
+
+		@include respond(tablet) {
+			padding: 0 1em;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -10;
+
+		border-radius: 25px;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		@include respond(tablet) {
+			display: block;
+			position: inherit;
+			border: 2px solid $purple;
+			width: 100%;
+			height: 420px;
+			object-fit: cover;
+		}
+	}
+
+	&__btn {
+		align-self: center;
+		transition: background-color 0.2s, color 0.2s;
+		margin-top: 2em;
+		border-radius: 25px;
+		background-color: $white;
+		padding: 0.8em 3em;
+		color: $black;
+		font-weight: 700;
+		font-size: 1.4rem;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include respond(tablet) {
+			align-self: flex-start;
+
+			font-size: 2rem;
+		}
 
 		&:hover {
-			border: 2px solid $purple;
-
-			&::after {
-				color: $purple;
-			}
+			background-color: $purple;
+			color: $white;
 		}
-
-		&:after {
-			transition: color 0.2s;
-			// background-color: rgba($color: $purple, $alpha: 0.3);
-			color: $rose;
-			font-size: 2.5rem;
-		}
-	}
-
-	.swiper-button-next {
-		right: 30px;
-	}
-
-	.swiper-button-prev {
-		left: 30px;
-	}
-
-	.swiper-pagination-bullet-active {
-		background-color: $rose;
 	}
 }

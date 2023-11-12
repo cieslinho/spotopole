@@ -2,6 +2,7 @@ const navBtn = document.querySelector('.nav__btn')
 const navOverlay = document.querySelector('.nav__overlay')
 const menu = document.querySelector('.nav__navbar')
 const navLinks = document.querySelectorAll('.nav__link')
+const btns = document.querySelectorAll('.suggested__btn')
 
 const handleNav = () => {
 	menu.classList.toggle('active')
@@ -26,13 +27,11 @@ const handleNav = () => {
 navBtn.addEventListener('click', handleNav)
 
 var swiper = new Swiper('.header__swiper', {
-	pagination: {
-		el: '.header__pagination',
-	},
-
-	navigation: {
-		nextEl: '.header__next',
-		prevEl: '.header__prev',
+	loop: true,
+	spaceBetween: 30,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
 	},
 })
 
@@ -68,4 +67,28 @@ var swiperGallery = new Swiper('.gallery__swiper', {
 		delay: 2500,
 		disableOnInteraction: false,
 	},
+})
+
+btns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		// console.log(btn.id)
+		document.querySelector('.active').classList.remove('active')
+		btn.classList.add('active')
+
+		checkProducts()
+	})
+
+	const products = document.querySelectorAll('.suggested__box')
+
+	function checkProducts() {
+		products.forEach(product => {
+			if (btn.id === product.id) {
+				console.log('to samo id')
+				product.classList.add('active')
+			} else {
+				console.log('inne id')
+				product.classList.remove('active')
+			}
+		})
+	}
 })

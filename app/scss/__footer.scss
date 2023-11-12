@@ -1,8 +1,11 @@
 .footer {
 	padding: 0.5em;
+	// font-weight: 700;
+	color: $white;
 	text-align: center;
 
 	&__link {
 		color: $purple;
+		font-weight: 700;
 	}
 }

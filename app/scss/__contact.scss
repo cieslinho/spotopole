@@ -2,8 +2,14 @@
 	@include section-padding;
 
 	.section-title {
+		color: $purple;
+
 		&::after {
 			width: 85%;
+		}
+
+		&::after {
+			background-color: $purple;
 		}
 	}
 
@@ -27,10 +33,10 @@
 	}
 
 	&__text {
-		line-height: 150%;
+		line-height: 180%;
 
 		@include respond(tablet) {
-			// font-size: 2.1rem;
+			font-size: 1.75rem;
 		}
 	}
 
@@ -46,6 +52,7 @@
 		&-box {
 			display: flex;
 			gap: 0.5em;
+			margin-bottom: 0.5em;
 			width: 100%;
 
 			@include respond(tablet) {
@@ -55,40 +62,77 @@
 
 		&-input,
 		&-textarea {
+			transition: box-shadow 0.2s;
 			outline: none;
 			border: none;
-			border: 2px solid $black;
-			border-radius: 5px;
+			border: 2px solid $purple;
+			border-radius: 25px;
 			background-color: rgba($color: $black, $alpha: 0.2);
-			padding: 0.5em 1em;
+			padding: 0.8em 1.6em;
 			width: 100%;
 			color: $white;
-
-			@include respond(tablet) {
-				padding: 0.8em 1.6em;
-			}
-
 			font-family: 'Poppins', sans-serif;
 
+			@include respond(tablet) {
+				padding: 1em 2em;
+			}
+
 			&::placeholder {
-				color: $white;
+				color: rgba($color: $white, $alpha: 0.3);
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				box-shadow: 0 0 8px $purple;
 			}
 		}
 
+		&-textarea {
+			min-height: 100px;
+
+			resize: vertical;
+		}
+
 		&-btn {
+			transition: background-color 0.2s, color 0.2s;
 			cursor: pointer;
+			margin-top: 1em;
 			outline: none;
 			border: none;
-			border-radius: 5px;
+			border-radius: 25px;
 			background-color: $white;
-			padding: 0.5em 1em;
+			padding: 1em;
 			color: $black;
 			font-weight: 700;
 			text-transform: uppercase;
 
+			&:hover {
+				background-color: $purple;
+				color: $white;
+			}
+
 			@include respond(tablet) {
 				padding: 0.8em 1.6em;
+				font-size: 1.8rem;
 			}
+		}
+	}
+
+	&__span {
+		position: relative;
+		z-index: 10;
+		font-weight: 700;
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: -5;
+			background-color: $purple;
+			width: 100%;
+			height: 6px;
+			content: '';
 		}
 	}
 }
