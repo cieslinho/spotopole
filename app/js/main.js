@@ -92,3 +92,13 @@ btns.forEach(btn => {
 		})
 	}
 })
+
+const pizzas = document.querySelectorAll('#pizza.suggested__box')
+
+function activePizzas() {
+	pizzas.forEach(pizza => {
+		pizza.classList.add('active')
+	})
+}
+
+activePizzas()

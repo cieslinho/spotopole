@@ -6,34 +6,18 @@
 
     <div class="gallery__swiper swiper">
         <div class="gallery__boxes swiper-wrapper">
+        <?php foreach( $attributes['gallery'] as $box ): ?>
             <div class="gallery__box swiper-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-1.jpg" alt=""
-                    class="gallery__box-img swiper-slide">
+            <?php if ( isset( $box['img']['url'] ) ) : ?>
+                <img class="gallery__box-img swiper-slide"  src="<?php echo esc_url( $box['img']['url'] ); ?>" alt="<?php echo esc_attr( $box['img']['alt'] ); ?>">
+
+                <?php endif; ?>
+
+
             </div>
-            <div class="gallery__box swiper-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-2.jpg" alt=""
-                    class="gallery__box-img swiper-slide">
-            </div>
-            <div class="gallery__box swiper-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-2.jpg" alt=""
-                    class="gallery__box-img swiper-slide">
-            </div>
-            <div class="gallery__box swiper-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-3.jpg" alt=""
-                    class="gallery__box-img swiper-slide">
-            </div>
-            <div class="gallery__box swiper-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-4.jpg" alt=""
-                    class="gallery__box-img swiper-slide">
-            </div>
-            <div class="gallery__box swiper-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-5.jpg" alt=""
-                    class="gallery__box-img swiper-slide">
-            </div>
-            <div class="gallery__box swiper-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-6.jpg" alt=""
-                    class="gallery__box-img swiper-slide">
-            </div>
+            <?php endforeach; ?>
+
+
 
 
         </div>

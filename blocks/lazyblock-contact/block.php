@@ -51,5 +51,5 @@
 
 </section>
 <div class="contact__map">
-    <iframe src="https://snazzymaps.com/embed/544375" width="100%" height="300px" style="border:none;"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.6942703112945!2d17.975184776881363!3d50.669936771535625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471053e8e0d49cfb%3A0x7e265602975c1190!2sSpot%20-%20food%20hall%20%26%20bar!5e0!3m2!1spl!2spl!4v1713945281295!5m2!1spl!2spl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>

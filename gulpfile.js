@@ -24,7 +24,7 @@ function liveReload(done) {
 		// server: {
 		//     baseDir: config.dist.base
 		// },
-		proxy: 'http://spotopole.local',
+		proxy: 'http://spot.local',
 	})
 	done()
 }

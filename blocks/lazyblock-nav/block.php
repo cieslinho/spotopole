@@ -12,7 +12,7 @@
 
             <div class="nav__links">
                
-                <a target="_blank" href="<?php echo get_template_directory_uri(); ?>/assets/files/SPOT-ULOTKA-2.pdf" class="nav__link">menu</a>
+                <a target="_blank" href="<?php echo get_template_directory_uri(); ?>/assets/files/menu-2024-v2.pdf" class="nav__link">menu</a>
                 <a href="#polecane" class="nav__link">polecane</a>
                 <a href="#galeria" class="nav__link">galeria</a>
               
@@ -52,7 +52,7 @@
         </div>
         <div class="nav__desktop-links">
             
-            <a target="_blank" href="<?php echo get_template_directory_uri(); ?>/assets/files/SPOT-ULOTKA-2.pdf"  class="nav__desktop-link">menu</a>
+            <a target="_blank" href="<?php echo get_template_directory_uri(); ?>/assets/files/menu-2024-v2.pdf"  class="nav__desktop-link">menu</a>
             <a href="#polecane" class="nav__desktop-link">polecane</a>
             <a href="/" class="nav__desktop-brand">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-kolor.png"
@@ -63,7 +63,7 @@
             <a href="#kontakt" class="nav__desktop-link">kontakt</a>
         </div>
         <div class="nav__desktop-right">
-            <a href="tel:+48537895760" class="nav__desktop-link nav__desktop-order">
+            <a href="tel:+48665200525" class="nav__desktop-link nav__desktop-order">
                 <i class='bx bxs-phone'></i>
                 zamów
             </a>

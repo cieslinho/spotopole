@@ -86,7 +86,7 @@
 
 		&-img {
 			width: 100%;
-			max-width: 300px;
+			max-width: 170px;
 		}
 
 		&-btn {
@@ -231,6 +231,15 @@
 					color: $black;
 				}
 			}
+
+			&--phone {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5em;
+				background-color: $black;
+				text-transform: uppercase;
+			}
 		}
 	}
 
@@ -259,6 +268,13 @@
 			box-shadow: 0 0 15px $rose;
 			background-color: $white;
 			color: $black;
+		}
+	}
+
+	#drink {
+		.suggested__content-spicy,
+		.suggested__content-order {
+			display: none;
 		}
 	}
 }

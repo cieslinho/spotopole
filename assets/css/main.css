@@ -721,7 +721,7 @@ body {
 }
 .suggested__box-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 170px;
 }
 .suggested__box-btn {
   position: absolute;
@@ -843,6 +843,14 @@ body {
   background-color: #fff;
   color: #000;
 }
+.suggested__content-order--phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  background-color: #000;
+  text-transform: uppercase;
+}
 .suggested__menu {
   display: block;
   z-index: 20;
@@ -869,6 +877,10 @@ body {
   box-shadow: 0 0 15px #f7d1dd;
   background-color: #fff;
   color: #000;
+}
+.suggested #drink .suggested__content-spicy,
+.suggested #drink .suggested__content-order {
+  display: none;
 }
 
 .gallery {

@@ -3,98 +3,31 @@
         <h2 class="section-title">Minione wydarzenia</h2>
 
         <div class="events__boxes">
-            <div class="events__box events__box-big">
+        <?php foreach( $attributes['box'] as $box ): ?>
+            <div class="events__box events__box-<?php echo $box['class']; ?>">
                 <div class="events__box-texts">
-                    <h4 class="events__box-title">Last Minute</h4>
-                    <p class="events__box-description">29 / 09 / 2023</p>
+                    <h4 class="events__box-title"><?php echo $box['title']; ?></h4>
+                    <p class="events__box-description"><?php echo $box['date']; ?></p>
                 </div>
                 <div class="events__box-socials">
-                    <a href="" class="events__box-social">
+                    <a href="<?php echo esc_url( $box['instagram'] ); ?>" class="events__box-social">
                         <i class='bx bxl-instagram-alt'></i>
                     </a>
-                    <a href="" class="events__box-social">
+                    <a href="<?php echo esc_url( $box['facebook'] ); ?>" class="events__box-social">
                         <i class='bx bxl-facebook-circle' ></i>
                     </a>
                 </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-2.jpg" alt="" class="events__box-img">
+                <?php if ( isset( $box['img']['url'] ) ) : ?>
+                <img src="<?php echo esc_url( $box['img']['url'] ); ?>" alt="<?php echo esc_attr( $box['img']['alt'] ); ?>" class="events__box-img">
+                <?php endif; ?>
+
+
             </div>
+            <?php endforeach; ?>
+
+
             
-            <div class="events__box events__box-small">
-                <div class="events__box-texts">
-                    <h4 class="events__box-title">Last Minute</h4>
-                    <p class="events__box-description">29 / 09 / 2023</p>
-                </div>
-                <div class="events__box-socials">
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-facebook-circle' ></i>
-                    </a>
-                </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/last-minute-event.jpg" alt="" class="events__box-img">
-            </div>
-            <div class="events__box events__box-small">
-                <div class="events__box-texts">
-                    <h4 class="events__box-title">Last Minute</h4>
-                    <p class="events__box-description">29 / 09 / 2023</p>
-                </div>
-                <div class="events__box-socials">
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-facebook-circle' ></i>
-                    </a>
-                </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/last-minute-event.jpg" alt="" class="events__box-img">
-            </div>
-            <div class="events__box events__box-small">
-                <div class="events__box-texts">
-                    <h4 class="events__box-title">Last Minute</h4>
-                    <p class="events__box-description">29 / 09 / 2023</p>
-                </div>
-                <div class="events__box-socials">
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-facebook-circle' ></i>
-                    </a>
-                </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/last-minute-event.jpg" alt="" class="events__box-img">
-            </div>
-            <div class="events__box events__box-big">
-                <div class="events__box-texts">
-                    <h4 class="events__box-title">Last Minute</h4>
-                    <p class="events__box-description">29 / 09 / 2023</p>
-                </div>
-                <div class="events__box-socials">
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-facebook-circle' ></i>
-                    </a>
-                </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/event-2.jpg" alt="" class="events__box-img">
-            </div>
-             <div class="events__box events__box-small">
-                <div class="events__box-texts">
-                    <h4 class="events__box-title">Last Minute</h4>
-                    <p class="events__box-description">29 / 09 / 2023</p>
-                </div>
-                <div class="events__box-socials">
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a href="" class="events__box-social">
-                        <i class='bx bxl-facebook-circle' ></i>
-                    </a>
-                </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/last-minute-event.jpg" alt="" class="events__box-img">
-            </div>
-        </div>
+          
         <a href="/" class="events__btn">powrót</a>
     </div>
 </section>
