@@ -89,8 +89,9 @@
 		}
 
 		&-textarea {
+			margin-top: 1em;
+			width: 100%;
 			min-height: 100px;
-
 			resize: vertical;
 		}
 
@@ -103,6 +104,7 @@
 			border-radius: 25px;
 			background-color: $white;
 			padding: 1em;
+			width: 100%;
 			color: $black;
 			font-weight: 700;
 			text-transform: uppercase;

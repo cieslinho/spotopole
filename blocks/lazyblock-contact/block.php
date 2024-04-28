@@ -28,7 +28,7 @@
                 </p>
             </div>
             <form action="" class="contact__form">
-                <div class="contact__form-box">
+                <!-- <div class="contact__form-box">
                     <input type="text" class="contact__form-input" placeholder="Imię" required>
                     <input type="text" class="contact__form-input" placeholder="Nazwisko" required>
 
@@ -42,7 +42,9 @@
                         placeholder="Wpisz treść wiadomości..." required></textarea>
                 </div>
 
-                <button class="contact__form-btn">wyślij</button>
+                <button class="contact__form-btn">wyślij</button> -->
+
+                [contact-form-7 id="57522ec" title="Formularz 1"]
             </form>
 
         </div>

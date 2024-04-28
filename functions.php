@@ -78,3 +78,12 @@ add_theme_support('post-thumbnails', array(
   }
   
   add_filter('nav_menu_css_class', 'add_additional_class', 1, 3);
+
+  add_filter('wpcf7_autop_or_not', '__return_false');
+
+  add_filter('wpcf7_autop_or_not', '__return_false');    
+    add_filter('wpcf7_form_elements', function($content) {  
+   $find = ['/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '/<(span).*?class="\s*(?:.*\s)?wpcf7-checkbox(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i' , '/<(span).*?class="\s*(?:.*\s)?wpcf7-list-item(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i'];   
+     $content = preg_replace( $find, '\2', $content);
+               return $content; 
+    });

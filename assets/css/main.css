@@ -773,6 +773,9 @@ body {
   border-bottom: 2px solid #f7d1dd;
   padding-block: 0.5em;
 }
+.suggested__content-prices {
+  display: none;
+}
 .suggested__content-ingridients {
   flex-wrap: wrap;
 }
@@ -1204,6 +1207,8 @@ body {
   box-shadow: 0 0 8px #c592e0;
 }
 .contact__form-textarea {
+  margin-top: 1em;
+  width: 100%;
   min-height: 100px;
   resize: vertical;
 }
@@ -1216,6 +1221,7 @@ body {
   border-radius: 25px;
   background-color: #fff;
   padding: 1em;
+  width: 100%;
   color: #000;
   font-weight: 700;
   text-transform: uppercase;
