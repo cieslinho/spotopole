@@ -39,6 +39,25 @@ function spot_config(){
 
 add_action('after_setup_theme', 'spot_config', 0);
 add_theme_support( 'title-tag' );
+add_theme_support('woocommerce', array(
+  'thumbnails_image_width' => 300,
+  'single_image_width' => 800,
+  'product_grid' => array(
+    'default_rows' => 10,
+    'min_rows' => 1,
+    'max_rows' => 10,
+    'default_columns' => 1,
+    'min_columns' => 1,
+    'max_columns' => 5
+  )
+));
+add_theme_support('wc-product-gallery-zoom');
+add_theme_support('wc-product-gallery-lightbox');
+add_theme_support('wc-product-gallery-slider');
+
+add_theme_support( 'post-thumbnails' );
+
+
 
 add_theme_support('post-thumbnails', array(
   'post',
@@ -81,9 +100,15 @@ add_theme_support('post-thumbnails', array(
 
   add_filter('wpcf7_autop_or_not', '__return_false');
 
-  add_filter('wpcf7_autop_or_not', '__return_false');    
-    add_filter('wpcf7_form_elements', function($content) {  
-   $find = ['/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '/<(span).*?class="\s*(?:.*\s)?wpcf7-checkbox(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i' , '/<(span).*?class="\s*(?:.*\s)?wpcf7-list-item(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i'];   
-     $content = preg_replace( $find, '\2', $content);
-               return $content; 
-    });
+
+  add_action( 'woocommerce_before_single_product_summary', 'my_unique_named_function', 5 );
+ 
+function my_unique_named_function() {
+    echo '<div class="product__content">';
+}
+
+add_action( 'woocommerce_after_single_product_summary', 'my_unique_named_functionn', 9 );
+ 
+function my_unique_named_functionn() {
+    echo '</div>';
+}

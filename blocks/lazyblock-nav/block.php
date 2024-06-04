@@ -17,7 +17,7 @@
                 <a href="#galeria" class="nav__link">galeria</a>
               
                 <a href="#kontakt" class="nav__link">kontakt</a>
-                <a href="tel:+48537895760" class="nav__link nav__order">
+                <a href="tel:+48665200525" class="nav__link nav__order">
                     <i class='bx bxs-phone'></i>
                     zamów
                 </a>
