@@ -27,25 +27,11 @@
                         class="contact__span">#WspólnieMocniejsi</span> <span class="contact__span">#DołączDoNas</span>
                 </p>
             </div>
-            <form action="" class="contact__form">
-                <!-- <div class="contact__form-box">
-                    <input type="text" class="contact__form-input" placeholder="Imię" required>
-                    <input type="text" class="contact__form-input" placeholder="Nazwisko" required>
-
-                </div>
-                <div class="contact__form-box">
-                    <input type="email" class="contact__form-input" placeholder="e-mail" required>
-                    <input type="number" class="contact__form-input" placeholder="Telefon" required>
-                </div>
-                <div class="contact__form-box">
-                    <textarea name="" id="" cols="30" rows="10" class="contact__form-textarea"
-                        placeholder="Wpisz treść wiadomości..." required></textarea>
-                </div>
-
-                <button class="contact__form-btn">wyślij</button> -->
+            <div class="contact__form">
+       
 
                 [contact-form-7 id="57522ec" title="Formularz 1"]
-            </form>
+            </div>
 
         </div>
 

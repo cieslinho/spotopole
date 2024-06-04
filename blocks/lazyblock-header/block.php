@@ -28,7 +28,6 @@
                 </div>
                 <a href="tel:+48665200525" class="header__btn">Zamów</a>
             </div>
-
             <div class="header__photo">
             <?php if ( isset( $attributes['img']['url'] ) ) : ?>
                 <img class="header__img" src="<?php echo esc_url( $attributes['img']['url'] ); ?>" alt="<?php echo esc_attr( $attributes['img']['alt'] ); ?>"

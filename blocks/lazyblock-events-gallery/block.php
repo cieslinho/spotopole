@@ -28,6 +28,7 @@
 
             
           
-        <a href="/" class="events__btn">powrót</a>
+       
     </div>
+		 <a href="/" class="events__btn">powrót</a>
 </section>
