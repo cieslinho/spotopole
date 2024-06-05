@@ -39,6 +39,19 @@
   background-color: #c592e0;
 }
 
+.section-title-new {
+  margin-bottom: 0.5em;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .section-title-new {
+    font-size: 2.8rem;
+  }
+}
+
 .section-purple {
   background-color: #c592e0;
 }
@@ -1262,6 +1275,84 @@ body {
   font-weight: 700;
 }
 
+.tabs {
+  padding: 2em 1em;
+  margin-top: 2em;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-top: 1em !important;
+}
+@media only screen and (min-width: 768px) {
+  .tabs {
+    padding: 3em 1em;
+  }
+}
+.tabs__boxes {
+  display: flex;
+}
+.tabs__btn {
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  cursor: pointer;
+  margin: 0.5em 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #c592e0;
+  padding: 0.6em 1.2em;
+  width: 100%;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.tabs__btn:hover {
+  border: 2px solid #c592e0;
+  background-color: #000;
+  color: #fff;
+}
+.tabs__content {
+  display: none;
+  border: 2px solid #c592e0;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1em;
+  text-align: center;
+}
+.tabs__content-price {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .tabs__content-price {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.tabs__content.active {
+  display: block;
+}
+.tabs__content-price.active {
+  display: flex;
+}
+.tabs__poll, .tabs__date {
+  color: #fff;
+}
+.tabs__price {
+  display: flex;
+  gap: 0.3em;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.5em 1em;
+  color: #c592e0;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+@media only screen and (min-width: 768px) {
+  .tabs__price {
+    font-size: 1.8rem;
+  }
+}
+
 .woocommerce-tabs.wc-tabs-wrapper {
   display: none;
 }
@@ -1349,6 +1440,9 @@ body {
   .product__content {
     flex-direction: row;
   }
+}
+.product section.related.products {
+  display: none;
 }
 
 .related.products h2 {

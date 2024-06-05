@@ -3,6 +3,8 @@ const navOverlay = document.querySelector('.nav__overlay')
 const menu = document.querySelector('.nav__navbar')
 const navLinks = document.querySelectorAll('.nav__link')
 const btns = document.querySelectorAll('.suggested__btn')
+const tabsBtn = document.querySelectorAll('.tabs__btn')
+const tabsContent = document.querySelectorAll('.tabs__content')
 
 const handleNav = () => {
 	menu.classList.toggle('active')
@@ -102,3 +104,9 @@ function activePizzas() {
 }
 
 activePizzas()
+
+tabsBtn.forEach(btn => {
+	btn.addEventListener('click', () => {
+		btn.nextElementSibling.classList.toggle('active')
+	})
+})

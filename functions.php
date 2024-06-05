@@ -112,3 +112,5 @@ add_action( 'woocommerce_after_single_product_summary', 'my_unique_named_functio
 function my_unique_named_functionn() {
     echo '</div>';
 }
+
+
