@@ -70,6 +70,10 @@
 			flex-direction: row;
 		}
 	}
+
+	section.related.products {
+		display: none;
+	}
 }
 
 .related.products {
@@ -296,9 +300,10 @@
 	}
 }
 
-.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents {
-	border-radius: 8px;
-	background-color: rgba($color: $white, $alpha: 0.05);
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents,
+#payment {
+	border-radius: 8px !important;
+	background-color: rgba($color: $white, $alpha: 0.05) !important;
 	padding: 1em 2em !important;
 
 	td.actions {
@@ -339,4 +344,161 @@
 
 .wc-proceed-to-checkout .checkout-button {
 	background-color: $purple !important;
+}
+
+#customer_details {
+	display: flex;
+	flex-direction: column;
+
+	gap: 2em;
+
+	@include respond(tablet) {
+		flex-direction: row;
+	}
+	.col-1,
+	.col-2 {
+		float: none;
+		border-radius: 8px;
+		// background-color: rgba($color: $white, $alpha: 0.05);
+		// padding: 1em 2em;
+		width: 100% !important;
+
+		input {
+			border: 1px solid $purple;
+			border-radius: 8px;
+			background-color: rgba($color: $white, $alpha: 0.05);
+			padding: 1em !important;
+			color: $white;
+			font-weight: 700;
+		}
+
+		.select2-container--default .select2-selection--single .select2-selection__rendered {
+			color: $white;
+			line-height: 0 !important;
+		}
+
+		.select2-container--default .select2-selection--single {
+			border: 1px solid $purple;
+			border-radius: 8px;
+			background-color: rgba($color: $white, $alpha: 0.05);
+			padding: 0.3em 0em !important;
+			height: unset !important;
+			font-weight: 700;
+		}
+
+		.select2-container .select2-selection--single .select2-selection__rendered {
+			padding: 1em !important;
+			overflow: visible !important;
+		}
+	}
+
+	.col-2 {
+		display: none !important;
+	}
+}
+
+.select2-results__option,
+.select2-container--default .select2-results__option[aria-selected='true'],
+.select2-container--default .select2-results__option[data-selected='true'] {
+	background-color: $black;
+	color: $white;
+	font-weight: 700;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+	background-color: $purple;
+}
+
+.checkout.woocommerce-checkout,
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
+	border-radius: 8px;
+	background-color: rgba($color: $white, $alpha: 0.05);
+	padding: 1em 2em;
+
+	h3 {
+		margin-block: 1em;
+	}
+}
+
+.woocommerce .col2-set::after,
+.woocommerce .col2-set::before,
+.woocommerce-page .col2-set::after,
+.woocommerce-page .col2-set::before {
+	display: none !important;
+}
+
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table td {
+	border: 1px solid $purple;
+	border-top: 1px solid $purple !important;
+	border-radius: 8px;
+	background-color: rgba($color: $white, $alpha: 0.05);
+	padding: 1em 2em;
+}
+
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
+	border: 1px solid $purple;
+	border-radius: 8px;
+	background-color: rgba($color: $white, $alpha: 0.05) !important;
+}
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
+	top: -0.9em !important;
+	border: 1em solid $purple;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+}
+
+#add_payment_method #payment div.payment_box p:last-child,
+.woocommerce-cart #payment div.payment_box p:last-child,
+.woocommerce-checkout #payment div.payment_box p:last-child,
+.payment_methods .wc-stripe-save-source .save-source-label,
+.wc-stripe_cc-container .wc-stripe-save-source .save-source-label {
+	color: $white;
+}
+
+#wc_stripe_local_payment_stripe_blik li {
+	margin-left: 1em !important;
+	color: $white;
+}
+
+.wc-stripe-blik-code-container p {
+	color: $purple;
+}
+
+.input-text.blik-code {
+	border: 1px solid $purple !important;
+	border-radius: 8px !important;
+	background-color: rgba($color: $white, $alpha: 0.05);
+	color: $purple !important;
+	font-weight: 700;
+}
+
+#add_payment_method #payment ul.payment_methods,
+.woocommerce-cart #payment ul.payment_methods,
+.woocommerce-checkout #payment ul.payment_methods {
+	border-bottom: 1px solid $purple;
+	padding: 0em !important;
+}
+
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
+	background-color: $purple !important;
+}
+
+.woocommerce-privacy-policy-link {
+	color: $purple !important;
+}
+
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table td {
+	a {
+		color: $purple;
+	}
 }

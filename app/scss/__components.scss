@@ -41,6 +41,18 @@
 	}
 }
 
+.section-title-new {
+	margin-bottom: 0.5em;
+	color: $white;
+	font-size: 1.8rem;
+	letter-spacing: 1px;
+	text-align: center;
+
+	@include respond(tablet) {
+		font-size: 2.8rem;
+	}
+}
+
 .section-purple {
 	background-color: $purple;
 }
