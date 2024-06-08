@@ -14,9 +14,10 @@
                
                 <a target="_blank" href="<?php echo get_template_directory_uri(); ?>/assets/files/menu-2024-v2.pdf" class="nav__link">menu</a>
                 <a href="#polecane" class="nav__link">polecane</a>
+                <a href="/sklep/" class="nav__link">sklep</a>
+                <a href="#eventy" class="nav__link">eventy</a>
                 <a href="#galeria" class="nav__link">galeria</a>
-              
-                <a href="#kontakt" class="nav__link">kontakt</a>
+                              <a href="#kontakt" class="nav__link">kontakt</a>
                 <a href="tel:+48665200525" class="nav__link nav__order">
                     <i class='bx bxs-phone'></i>
                     zamów
@@ -54,10 +55,12 @@
             
             <a target="_blank" href="<?php echo get_template_directory_uri(); ?>/assets/files/menu-2024-v2.pdf"  class="nav__desktop-link">menu</a>
             <a href="#polecane" class="nav__desktop-link">polecane</a>
+            <a href="#eventy" class="nav__desktop-link">eventy</a>
             <a href="/" class="nav__desktop-brand">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-kolor.png"
                     alt="Spot Opole, Beach Bar Spot Opole" class="nav__desktop-logo">
             </a>
+            <a href="/sklep/" class="nav__desktop-link">sklep</a>
             <a href="#galeria" class="nav__desktop-link">galeria</a>
             
             <a href="#kontakt" class="nav__desktop-link">kontakt</a>

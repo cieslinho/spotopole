@@ -1363,11 +1363,17 @@ body {
   width: 100%;
   max-width: 1600px;
   padding: 2em 1em;
+  margin-top: 72px;
   background-color: #000;
 }
 @media only screen and (min-width: 768px) {
   .woocommerce-page {
     padding: 3em 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .woocommerce-page {
+    margin-top: 128px;
   }
 }
 
@@ -1764,10 +1770,21 @@ body {
 
 .woocommerce table.shop_table th,
 .woocommerce table.shop_table td {
-  border: 1px solid #c592e0;
-  border-top: 1px solid #c592e0 !important;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #c592e0;
+  padding: 1em 2em;
+  color: #fff;
+}
+
+.woocommerce table > tbody > tr:nth-child(2n+1) > td {
+  background-color: #000;
+}
+
+.woocommerce table > tbody > tr:nth-child(2n) > td {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.woocommerce .order_details.woocommerce-thankyou-order-details {
+  background-color: #c592e0 !important;
   padding: 1em 2em;
 }
 
@@ -1833,4 +1850,24 @@ body {
 .woocommerce table.shop_table th a,
 .woocommerce table.shop_table td a {
   color: #c592e0;
+}
+
+.woocommerce-checkout #payment div.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.woocommerce-checkout #payment div.form-row .button.alt {
+  margin-top: 1em !important;
+}
+
+label.p-FieldLabel.Label.Label--empty {
+  color: #fff !important;
+}
+
+.events-main {
+  background-color: #000;
+}
+.events-main .section-title {
+  margin-bottom: 1em;
 }

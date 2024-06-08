@@ -122,17 +122,17 @@ get_header( 'shop' ); ?>
   
   <button id="info" class="tabs__btn">Opis</button>
   <div class="tabs__content tabs__content-descrpition">
-    <p class="tabs__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam fugit corrupti est dignissimos esse dolore, officiis modi. In unde pariatur magni iste fugit vitae at perferendis modi sapiente ipsam consequatur eaque aliquid assumenda, blanditiis veniam reprehenderit corporis nihil quo hic eligendi architecto soluta commodi ut laborum. Iure fuga doloremque illum.</p>
+    <p class="tabs__description"><?php echo esc_html( get_field('description') ); ?></p>
   </div>
   <button id="price" class="tabs__btn">Cena</button>
   <div class="tabs__content tabs__content-price">
-    <p class="tabs__price tabs__price-first"><span class="tabs__poll">Pula 1:</span> 50 zł <span class="tabs__date">do 17/06/2024</span></p>
-    <p class="tabs__price tabs__price-second"><span class="tabs__poll">Pula 2:</span> 80 zł <span class="tabs__date">od 18/06/2024 do 01/07/2024</span></p>
-    <p class="tabs__price tabs__price-third"><span class="tabs__poll">Pula 3:</span> 100 zł <span class="tabs__date">od 02/07/2024 do 26/07/2024</span></p>
+    <p class="tabs__price tabs__price-first"><span class="tabs__poll">Pula 1:</span> <?php echo esc_html( get_field('poll-1') ); ?> <span class="tabs__date"><?php echo esc_html( get_field('data_1') ); ?></span></p>
+    <p class="tabs__price tabs__price-second"><span class="tabs__poll">Pula 2:</span> <?php echo esc_html( get_field('poll-2') ); ?> <span class="tabs__date"><?php echo esc_html( get_field('data_2') ); ?></span></p>
+    <p class="tabs__price tabs__price-third"><span class="tabs__poll">Pula 3:</span> <?php echo esc_html( get_field('poll-3') ); ?> <span class="tabs__date"><?php echo esc_html( get_field('data_3') ); ?></span></p>
   </div>
   <button id="place" class="tabs__btn">Spotify</button>
-  <div class="tabs__content tabs__content-location">
-  <iframe class="tabs__iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/7kaEEK2cQh07aEfEEBd4Hn?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <div class="tabs__content tabs__content-spotify">
+  <iframe class="tabs__iframe" style="border-radius:12px" src="<?php echo esc_html( get_field('spotify') ); ?>" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 </div>
 </section>

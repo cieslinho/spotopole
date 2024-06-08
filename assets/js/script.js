@@ -5,6 +5,7 @@ const navLinks = document.querySelectorAll('.nav__link')
 const btns = document.querySelectorAll('.suggested__btn')
 const tabsBtn = document.querySelectorAll('.tabs__btn')
 const tabsContent = document.querySelectorAll('.tabs__content')
+const stripeLabel = document.querySelector('.p-FieldLabel')
 
 const handleNav = () => {
 	menu.classList.toggle('active')

@@ -5,7 +5,13 @@
 .woocommerce-page {
 	@include container;
 	@include section-padding;
+
+	margin-top: 72px;
 	background-color: $black;
+
+	@include respond(tablet) {
+		margin-top: 128px;
+	}
 }
 
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) .woocommerce-breadcrumb {
@@ -431,10 +437,21 @@
 
 .woocommerce table.shop_table th,
 .woocommerce table.shop_table td {
-	border: 1px solid $purple;
-	border-top: 1px solid $purple !important;
-	border-radius: 8px;
-	background-color: rgba($color: $white, $alpha: 0.05);
+	background-color: $purple;
+	padding: 1em 2em;
+	color: $white;
+}
+
+.woocommerce table > tbody > tr:nth-child(2n + 1) > td {
+	background-color: $black;
+}
+
+.woocommerce table > tbody > tr:nth-child(2n) > td {
+	background-color: rgba($color: $black, $alpha: 0.4);
+}
+
+.woocommerce .order_details.woocommerce-thankyou-order-details {
+	background-color: $purple !important;
 	padding: 1em 2em;
 }
 
@@ -501,4 +518,18 @@
 	a {
 		color: $purple;
 	}
+}
+
+.woocommerce-checkout #payment div.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	.button.alt {
+		margin-top: 1em !important;
+	}
+}
+
+label.p-FieldLabel.Label.Label--empty {
+	color: $white !important;
 }
